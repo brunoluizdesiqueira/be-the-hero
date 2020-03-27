@@ -48,6 +48,10 @@ class IncidentController {
       .select('ong_id')
       .first();
 
+    if (!incident) {
+      return res.status(401).json({error: 'Incident not exists.'});
+    }
+
     if (incident.ong_id !== ong_id) {
       return res.status(401).json({error: 'Operation not permitted.'});
     }
