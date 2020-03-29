@@ -1,4 +1,4 @@
-import connection from '../database/connection'
+const connection = require('../database/connection');
 
 class ProfileController {
   async index(req, res) {
@@ -11,4 +11,4 @@ class ProfileController {
   }
 }
 
-export default new ProfileController();
+module.exports = new ProfileController();

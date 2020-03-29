@@ -1,4 +1,4 @@
-import connection from '../database/connection'
+const connection = require('../database/connection');
 
 class IncidentController {
 
@@ -61,4 +61,4 @@ class IncidentController {
   }
 }
 
-export default new IncidentController();
+module.exports = new IncidentController();
